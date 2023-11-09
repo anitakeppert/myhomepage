@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en" data-bs-theme="text-light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <style></style>
+    <script>
+      // TODO: Add code 
+      function expandCard(classValue) {
+        
+        let buttonClass = '.' + classValue;
+        
+        let buttonElement = document.querySelector(buttonClass);
+        let textClass = buttonClass + 'Text';
+        
+        let textElement = document.querySelector(textClass);
+        let cardClassId = classValue + 'Card';
+        let imgClassId =  classValue + "Img"
+       
+        let cardElement = document.getElementById(cardClassId);
+        let imgElement = document.getElementById(imgClassId)
+        
+          if (buttonElement.innerHTML === "More Info") {
+            cardElement.classList.replace('col-md-6', 'col-md-12');
+            cardElement.classList.replace('col-lg-3', 'col-lg-12');
+            cardElement.classList.add('is-selected');
+            imgElement.src = "https://random.imagecdn.app/600/300"
+            textElement.innerHTML = "Aliquam a tempus lacus. Proin sit amet neque a nisl imperdiet volutpat at at ipsum. Etiam volutpat augue id turpis vehicula ullamcorper. Nulla leo ligula, efficitur nec purus placerat, sagittis condimentum lacus. Donec accumsan lacus diam, at convallis velit accumsan facilisis. Nam a vestibulum urna. Nulla ac commodo ante. Etiam nec bibendum risus. Vivamus ut felis sollicitudin magna euismod molestie eget in massa. Donec in odio vitae ex auctor sollicitudin. Integer urna diam, rutrum nec placerat vel, suscipit vitae metus. Nullam rutrum, elit eu tincidunt ullamcorper, dolor ipsum efficitur lorem, ut volutpat mauris odio tincidunt est. In mi libero, lobortis nec maximus ut, auctor eu lorem. Sed in risus et libero rhoncus commodo. Lorem ipsum dolor sit amet consectetur adipisicing elit Assumenda accusamus nobis sed cupiditate iusto Quibusdam";
+            textElement.classList.add('text-start');
+            buttonElement.innerHTML = "Less Info";
+          }
+          else {
+            textElement.innerHTML = "Etiam volutpat augue id turpis vehicula ullamcorper. Nulla leo ligula, efficitur nec purus placerat.";
+            textElement.classList.remove('text-start');
+            buttonElement.innerHTML = "More Info";
+            cardElement.classList.replace('col-md-12', 'col-md-6');
+            cardElement.classList.replace('col-lg-12', 'col-lg-3');
+            cardElement.classList.remove('is-selected');
+            imgElement.src = "https://random.imagecdn.app/300/300";
+
+            
+          }
+          
+        }
+   </script>
+  
+  </head>
+  <body class="text-center bg-dark text-light">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
+
+    <!--Navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg border-bottom border-body bg-dark" data-bs-theme="dark">
+        
+      <div class="container-fluid">
+        
+        <a class="navbar-brand" href="#">
+          <img src="https://randomuser.me/api/portraits/women/88.jpg" class="rounded-circle" alt=""/> My Portofolio </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Projects</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="future1.html">Future stuff</a>
+            </li>
+          </ul>
+
+          <img src="images/moon.png" id="icon">
+
+        </div>
+      </div>
+    </nav>
+
+    <!--Projects Section-->
+    <section id="Projects" class="p-1 bg-secondary text-black">
+      <div class="container mt-5">
+        <h2 class="text-center">My Projects</h2>
+        <p class="lead text-center mt-3 mb-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+
+        <div class="card-group">
+          <div id="js-project1Card" class="col-md-6 col-lg-3 mb-3 p-1">
+            <div class="card">
+              <div class="card-body text-center">
+              <a href="#card1"></a>
+                <img
+                  src="https://random.imagecdn.app/301/299"
+                  class="img-fluid"
+                  id="js-project1Img"
+                />
+                <h3 class="card-title mb-3">Project A</h3>
+                <p class="js-project1Text">
+                  Etiam volutpat augue id turpis vehicula ullamcorper. Nulla leo ligula, efficitur nec purus placerat.
+                </p>
+                
+              </div>
+                <div class="card-footer">
+                  <small><div><button onclick="
+                    expandCard('js-project1');
+                    "class="js-project1" href="#card1">More Info</button></div></small>
+                </div>
+              
+            </div>
+          </div>
+           
+          <div id="js-project2Card" class="col-md-6 col-lg-3 mb-3 p-1"> 
+            <div class="card">
+              <div class="card-body text-center">
+               <a href="#card2"></a>
+                <img
+                  src="https://random.imagecdn.app/302/300"
+                  class="img-fluid"
+                  id="js-project2Img"
+                />
+                <h3 class="card-title mb-3">Project X</h3>
+                <p class="js-project2Text">
+                  Etiam volutpat augue id turpis vehicula ullamcorper. Nulla leo ligula, efficitur nec purus placerat. 
+                </p>
+                
+              </div>
+                <div class="card-footer">
+                  <small><div><button onclick="
+                    expandCard('js-project2');
+                    "class="js-project2" href="#card2">More Info</button></div></small>
+                </div>
+            </div>
+          </div>
+
+          <div id="js-project3Card" class="col-md-6 col-lg-3 mb-3 p-1">
+            <div class="card">
+              <div class="card-body text-center">
+               <a href="#card3"></a>
+                <img
+                  src="https://random.imagecdn.app/300/301"
+                  class="img-fluid"
+                  id="js-project3Img"
+            
+                />
+                <h3 class="card-title mb-3">Project Z</h3>
+                <p class="js-project3Text">
+                  Etiam volutpat augue id turpis vehicula ullamcorper. Nulla leo ligula, efficitur nec purus placerat.
+                </p>
+                
+              </div>
+              <div class="card-footer">
+                <small><div><button onclick="
+                  expandCard('js-project3');
+                  "class="js-project3">More Info</button></div></small>
+              </div>
+            </div>
+          </div>
+
+          <div id="js-project4Card" class="col-md-6 col-lg-3 mb-3 p-1">
+            <div class="card">
+              <div class="card-body text-center">
+               <a href="#card4"></a>
+                <img
+                  src="https://random.imagecdn.app/300/302"
+                  class="img-fluid"
+                  id="js-project4Img"
+                />
+                <h3 class="card-title mb-3">Project Y</h3>
+                <p class="js-project4Text">
+                  Etiam volutpat augue id turpis vehicula ullamcorper. Nulla leo ligula, efficitur nec purus placerat. 
+                
+              </div>
+                <div class="card-footer">
+                  <small><div><button onclick="
+                    expandCard('js-project4');
+                    "class="js-project4">More Info</button></div></small>
+                </div>
+              
+            </div>
+          </div>
+
+          <div id="js-project5Card" class="col-md-6 col-lg-3 mb-3 p-1">
+            <div class="card">
+              <div class="card-body text-center">
+               <a href="#card5"></a>
+                <img
+                  src="https://random.imagecdn.app/299/302"
+                  class="img-fluid"
+                  id="js-project5Img"
+                />
+                <h3 class="card-title mb-3">Project Y</h3>
+                <p class="js-project5Text">
+                  Etiam volutpat augue id turpis vehicula ullamcorper. Nulla leo ligula, efficitur nec purus placerat. 
+                
+              </div>
+                <div class="card-footer">
+                  <small><div><button onclick="
+                    expandCard('js-project5');
+                    "class="js-project5">More Info</button></div></small>
+                </div>
+              
+            </div>
+          </div>
+
+          <div id="js-project6Card" class="col-md-6 col-lg-3 mb-3 p-1">
+            <div class="card">
+              <div class="card-body text-center">
+               <a href="#card6"></a>
+                <img
+                  src="https://random.imagecdn.app/298/302"
+                  class="img-fluid"
+                  id="js-project6Img"
+                />
+                <h3 class="card-title mb-3">Project Y</h3>
+                <p class="js-project6Text">
+                  Etiam volutpat augue id turpis vehicula ullamcorper. Nulla leo ligula, efficitur nec purus placerat. 
+                
+              </div>
+                <div class="card-footer">
+                  <small><div><button onclick="
+                    expandCard('js-project6');
+                    "class="js-project6">More Info</button></div></small>
+                </div>
+              
+            </div>
+          </div>
+
+          <div id="js-project7Card" class="col-md-6 col-lg-3 mb-3 p-1">
+            <div class="card">
+              <div class="card-body text-center">
+               <a href="#card7"></a>
+                <img
+                  src="https://random.imagecdn.app/297/302"
+                  class="img-fluid"
+                  id="js-project7Img"
+                />
+                <h3 class="card-title mb-3">Project Y</h3>
+                <p class="js-project7Text">
+                  Etiam volutpat augue id turpis vehicula ullamcorper. Nulla leo ligula, efficitur nec purus placerat. 
+                
+              </div>
+                <div class="card-footer">
+                  <small><div><button onclick="
+                    expandCard('js-project7');
+                    "class="js-project7">More Info</button></div></small>
+                </div>
+              
+            </div>
+          </div>
+
+          <div id="js-project8Card" class="col-md-6 col-lg-3 mb-3 p-1">
+            <div class="card">
+              <div class="card-body text-center">
+               <a href="#card8"></a>
+                <img
+                  src="https://random.imagecdn.app/305/302"
+                  class="img-fluid"
+                  id="js-project8Img"
+                />
+                <h3 class="card-title mb-3">Project Y</h3>
+                <p class="js-project8Text">
+                  Etiam volutpat augue id turpis vehicula ullamcorper. Nulla leo ligula, efficitur nec purus placerat. 
+                
+              </div>
+                <div class="card-footer">
+                  <small><div><button onclick="
+                    expandCard('js-project8');
+                    "class="js-project8" >More Info</button></div></small>
+                </div>
+              
+            </div>
+          </div>
+          
+
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-section bg-dark text-light mt-3">
+      <div>
+        <p>copyright anitakeppert &#169 2023</p>
+      </div>
+    </section>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+.my-picture {
+  height: 50px;
+  border-radius: 20px;
+  margin-left: 15px;
+}
+
+.rounded-circle  {
+  height: 50px;
+  border-radius: 20px;
+  margin-left: 15px;
+}
+
+.future1 {
+ align-self: center;
+}
+
+.about-image {
+  text-align: center;
+}
+  
+.footer-section {
+ 
+  font-family: Arial;
+  font-size: 8;
+ 
+}
+
+#icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+
+.row-home-page {
+margin-top: 15%;
+height: 70vh;
+display: flex;
+}
+
+.col-home-page {
+  
+  align-items: center;
+  margin-left: 5%;
+
+}
+
+.hand-wave {
+  height: 30px; 
+  margin-top: -12px; 
+  margin-left: 4px;
+}
+
+
+.is-selected {
+  display: flex; 
+
+}
+
+
